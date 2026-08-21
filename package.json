@@ -1,0 +1,23 @@
+{
+  "name": "discord-mod-dashboard",
+  "version": "1.0.0",
+  "description": "بوت حماية Discord + داشبورد ويب للتحكم في AutoMod",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "passport": "^0.7.0",
+    "passport-discord": "^0.1.4",
+    "mongoose": "^8.5.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

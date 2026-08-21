@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>الداشبورد</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <span class="logo">🛡️ Mod Dashboard</span>
+    <a href="/auth/logout" class="btn-logout">تسجيل خروج</a>
+  </header>
+
+  <main class="container">
+    <!-- شاشة اختيار السيرفر -->
+    <section id="guild-select-screen">
+      <h2>اختار السيرفر اللي عايز تديره</h2>
+      <div id="guild-list" class="guild-grid">جاري التحميل...</div>
+    </section>
+
+    <!-- شاشة إعدادات السيرفر (مخفية في الأول) -->
+    <section id="guild-config-screen" class="hidden">
+      <button id="back-btn" class="btn-back">⬅ رجوع للسيرفرات</button>
+      <h2 id="guild-name-title"></h2>
+
+      <div class="card">
+        <div class="row-between">
+          <span>تفعيل AutoMod</span>
+          <label class="switch">
+            <input type="checkbox" id="automod-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>الكلمات الممنوعة (Bad Words)</h3>
+        <div class="add-word-row">
+          <input type="text" id="new-word-input" placeholder="اكتب كلمة وادوس Enter أو دوس إضافة" />
+          <button id="add-word-btn">إضافة</button>
+        </div>
+        <ul id="badwords-list" class="badwords-list"></ul>
+        <button id="save-btn" class="btn-save">💾 حفظ التغييرات</button>
+        <span id="save-status"></span>
+      </div>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
